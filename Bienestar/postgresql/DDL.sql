@@ -44,64 +44,22 @@ CREATE TABLE modalidad (
 
 
 CREATE TABLE instructor_lider(
-    numero_documento_instructor_lider  INT      NOT NULL,
-    nombre_instructor_lider            VARCHAR (300) NOT NULL,
-    email_instructor_lider             VARCHAR (100) NOT NULL,
-    user_insert                        VARCHAR          NOT NULL,               
-    fecha_insert                       TIMESTAMP WITHOUT TIME ZONE NOT NULL,    
-    user_update                        VARCHAR,                                  
-    fecha_update                       TIMESTAMP WITHOUT TIME ZONE,   
+    numero_documento_instructor_lider      INT      NOT NULL,
+    nombre_instructor_lider                VARCHAR (300) NOT NULL,
+    email_instructor_lider                 VARCHAR (100) NOT NULL,
+    user_insert                            VARCHAR          NOT NULL,               
+    fecha_insert                           TIMESTAMP WITHOUT TIME ZONE NOT NULL,    
+    user_update                            VARCHAR,                                  
+    fecha_update                           TIMESTAMP WITHOUT TIME ZONE,   
     PRIMARY KEY (numero_documento_instructor_lider)
 );
-CREATE TABLE beneficio
-(
-    codigo_beneficio                 INT              NOT NULL,                
-    fecha_inicio_beneficio           DATE             NOT NULL,                
-    fecha_fin_beneficio              DATE             NOT NULL,       
-    cupos_beneficio                  INT              NOT NULL,                
-    user_insert                      VARCHAR          NOT NULL,               
-    fecha_insert                     TIMESTAMP WITHOUT TIME ZONE NOT NULL,    
-    user_update                      VARCHAR,                                  
-    fecha_update                     TIMESTAMP WITHOUT TIME ZONE,              
-
-    PRIMARY KEY(codigo_beneficio),
-    FOREIGN  KEY (codigo_usuario) REFERENCES usuario_admin (codigo_usuario)
-);
-
-
-
-
-
-CREATE TABLE aprendiz(
-    numero_documento_aprendiz      INT   NOT NULL,
-    codigo_beneficio               INT       NOT NULL,
-    obligacion_mensual             BOOLEAN    ,
-    tipo_documento                 VARCHAR       NOT NULL,
-    nombre_completo_aprendiz       VARCHAR   NOT  NULL,
-    fecha_adjudicacion             DATE     NOT NULL,
-    id_modalidad                   INT       ,
-    numero_telefono_fijo           VARCHAR(50)      NOT NULL,              
-    numero_telefono_movil          VARCHAR(50)      NOT NULL,                
-    direccion_residencia_aprendiz      VARCHAR(100)     NOT NULL,              
-    email_aprendiz                 VARCHAR(100)     NOT NULL,           
-    user_insert                    VARCHAR          NOT NULL,                
-    fecha_insert                   TIMESTAMP WITHOUT TIME ZONE NOT NULL,     
-    user_update                    VARCHAR,                                  
-    fecha_update                  TIMESTAMP WITHOUT TIME ZONE,         
-
-    PRIMARY  KEY  (numero_documento_aprendiz),
-    FOREIGN KEY   (codigo_beneficio) REFERENCES beneficio (codigo_beneficio),
-    FOREIGN KEY  (id_modalidad)      REFERENCES modalidad (id_modalidad)
-);
-
 
 CREATE TABLE ficha
 (
     codigo_ficha                       INT             NOT NULL,             
-    numero_documento_aprendiz          INT NOT NULL,
     fecha_inicio_ficha                 DATE            NOT NULL,                      
     fecha_inicio_etapa_productiva      DATE          ,               
-    fecha_fin_ficha                   DATE            NOT NULL,                       
+    fecha_fin_ficha                    DATE            NOT NULL,                       
     nivel_formacion                    VARCHAR        ,                       
     nombre_programa                    VARCHAR(100)    NOT NULL,                       
     modalidad_formacion                VARCHAR(50)     ,                      
@@ -110,9 +68,45 @@ CREATE TABLE ficha
     user_update                        VARCHAR,                                        
     fecha_update                       TIMESTAMP WITHOUT TIME ZONE,                   
 
-    PRIMARY KEY (codigo_ficha),
-    FOREIGN KEY ( numero_documento_aprendiz)  REFERENCES aprendiz (numero_documento_aprendiz)
+    PRIMARY KEY (codigo_ficha)
 );
+CREATE TABLE beneficio
+(
+    codigo_beneficio                      INT              NOT NULL,
+    fecha_inicio_beneficio                DATE             NOT NULL,                
+    fecha_fin_beneficio                   DATE             NOT NULL,       
+    cupos_beneficio                       INT              NOT NULL,                
+    user_insert                           VARCHAR          NOT NULL,               
+    fecha_insert                          TIMESTAMP WITHOUT TIME ZONE NOT NULL,    
+    user_update                           VARCHAR,                                  
+    fecha_update                          TIMESTAMP WITHOUT TIME ZONE,              
+    PRIMARY KEY(codigo_beneficio)
+);
+CREATE TABLE aprendiz(
+    numero_documento_aprendiz        INT        NOT NULL,
+    obligacion_mensual               BOOLEAN    ,
+    codigo_ficha                     INT  NOT   NULL,
+    codigo_beneficio                 INT  NOT    NULL,
+    tipo_documento                   VARCHAR    NOT NULL,
+    nombre_completo_aprendiz         VARCHAR    NOT  NULL,
+    fecha_adjudicacion               DATE       NOT NULL,
+    id_modalidad                     INT       ,
+    numero_telefono_fijo             VARCHAR(50)      NOT NULL,              
+    numero_telefono_movil            VARCHAR(50)      NOT NULL,                
+    direccion_residencia_aprendiz    VARCHAR(100)     NOT NULL,              
+    email_aprendiz                   VARCHAR(100)     NOT NULL,           
+    user_insert                      VARCHAR          NOT NULL,                
+    fecha_insert                     TIMESTAMP WITHOUT TIME ZONE NOT NULL,     
+    user_update                      VARCHAR,                                  
+    fecha_update                     TIMESTAMP WITHOUT TIME ZONE,         
+
+    PRIMARY  KEY  (numero_documento_aprendiz),
+    FOREIGN KEY  (id_modalidad)      REFERENCES modalidad (id_modalidad),
+    FOREIGN KEY (codigo_ficha)  REFERENCES  ficha   (codigo_ficha),
+    FOREIGN  KEY (codigo_beneficio)  REFERENCES  beneficio ( codigo_beneficio)
+  );
+
+
 
 CREATE TABLE  aprendiz_suspendido (
     id_aprendiz_suspendido           INT NOT   NULL,

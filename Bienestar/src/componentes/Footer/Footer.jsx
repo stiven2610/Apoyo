@@ -15,7 +15,7 @@ const Footer = () => {
           <div className="col-md-6 text-center">
             <img
               className="img-fluid"
-              src="/public/images/logo.png"
+              src="/images/logo.png"
               alt="logo bienestar"
             />
           </div>

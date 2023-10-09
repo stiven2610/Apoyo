@@ -9,7 +9,7 @@ import Aprendices_adjudicados from './componentes/Aprendices_ajudicados/Aprendic
 import Cargue_excel_adj from './componentes/Cargue_excel/Cargue_excel_adj';
 import Cargue_formato_seguimiento from './componentes/Cargue_formato_seguimiento/Cargue_formato_seguimiento';
 import FormRegistro from './componentes/formulario de registros/formularioRegistroAsistencia';
-import Formulario_Gestion_aprendiz from './componentes/Formulario_gestion_aprendiz/Gestion_aprendiz';
+import Formulario_gestion_aprendiz from './componentes/Formulario_gestion_aprendiz/Gestion_aprendiz';
 const router = createBrowserRouter([
   {
     path:"/",
@@ -55,7 +55,7 @@ const router = createBrowserRouter([
 
   {
     path:"/gestiondatosaprendiz",
-    element: <Formulario_Gestion_aprendiz />,
+    element: <Formulario_gestion_aprendiz />,
     errorElement:<h1>error</h1>
   },
   {

@@ -1,11 +1,12 @@
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
-import Formulario_Gestion_aprendiz from "../Formulario_gestion_aprendiz/Gestion_aprendiz";
+import Formulario_gestion_aprendiz from "../Formulario_gestion_aprendiz/Gestion_aprendiz"; // Asegúrate de que la ruta sea correcta
+
 const Gestion_datos = () => {
   return (
     <>
       <Header />
-      <Formulario_Gestion_aprendiz />
+      <Formulario_gestion_aprendiz />
       <Footer />
     </>
   );
