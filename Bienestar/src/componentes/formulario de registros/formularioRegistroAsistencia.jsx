@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Navbar from "../navbar/navbar";
 import "./styles.css";
+import Footer from "../Footer/Footer";
 const FormRegistroAsistenciaTaller = () => {
   // Definir estados para los datos del formulario
   const [user, setUser] = useState({
@@ -116,7 +117,7 @@ const FormRegistroAsistenciaTaller = () => {
         <div className="container d-flex justify-content-center">
           <div className="col-md-5" id="form-container">
             <div className="container_form bg-light p-4 rounded text-center">
-              <p className="titulo_beneficio text-success font-weight-bold">
+              <p className="titulo_beneficio  font-weight-bold"style={{ color: "#084416" }}>
                 REGISTRO ASISTENCIA
               </p>
               <form onSubmit={handleSubmit} autoComplete="off">
@@ -124,7 +125,7 @@ const FormRegistroAsistenciaTaller = () => {
                 <div className="form-group mb-2 text-center">
                   <label
                     htmlFor="numero_documento_aprendiz"
-                    className="form_label mb-3"
+                    className="form_label mb-3"style={{ color: "#4ae96f" }}
                   >
                     Número de Documento
                   </label>
@@ -146,7 +147,7 @@ const FormRegistroAsistenciaTaller = () => {
                   )}
                 </div>
                 <div className="form-group mb-2 text-center">
-                  <label htmlFor="codigo_taller" className="form_label mb-3">
+                  <label htmlFor="codigo_taller" className="form_label mb-3"style={{ color: "#4ae96f" }}>
                     Código del Taller
                   </label>
                   <input
@@ -170,7 +171,7 @@ const FormRegistroAsistenciaTaller = () => {
                 <div className="form-group mb-2 text-center">
                   <label
                     htmlFor="contrasenha_taller"
-                    className="form_label mb-3"
+                    className="form_label mb-3"style={{ color: "#4ae96f" }}
                   >
                     Contraseña del Taller
                   </label>
@@ -193,7 +194,7 @@ const FormRegistroAsistenciaTaller = () => {
                 </div>
 
                 <button
-                  className="btn boton_crear m-4 btn-success"
+                  className="btn boton_crear m-4 btn-success"style={{ background: "#4ae96f" }}
                   type="submit"
                 >
                   Registrarse
@@ -203,6 +204,7 @@ const FormRegistroAsistenciaTaller = () => {
           </div>
         </div>
       </div>
+      <Footer/>
     </>
   );
 };

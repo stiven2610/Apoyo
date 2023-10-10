@@ -1,15 +1,13 @@
+import Buscador_sencillo from "../Buscador/Buscador_sencillo";
 import Header from "../Header/Header"
-import Footer from "../Footer/Footer"
 import Tabla_asistencia from "../Tabla_asistencia.jsx/Tabla_asistencia";
-import Buscador_asis_taller from "../Buscador_asis_taller/Buscador_asis_taller";
 
 const Asistencia_taller_adm =()=>{
     return(
         <>
         <Header/>
-        <Buscador_asis_taller/>
+        <Buscador_sencillo/>
         <Tabla_asistencia/>
-        <Footer/>
         </>
     );
 };

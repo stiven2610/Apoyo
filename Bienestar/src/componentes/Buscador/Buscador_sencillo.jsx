@@ -1,7 +1,7 @@
 import "./styles.css"
 const Buscador_sencillo = () => {
   return (
-    <div className="container mt-5 ">
+    <div className="container mt-3 col-md-6 ">
       <form>
         <div className=" container_flex p-3 ">
           <div className="form-group p-2">
@@ -10,7 +10,7 @@ const Buscador_sencillo = () => {
             </label>
             <select className="form-select" aria-label="Default select example">
               <option value="1">Cedula de Ciudadania</option>
-              <option value="2">Tarjeta de Identida</option>
+              <option value="2">Tarjeta de Identidad</option>
               <option value="3">Cedula de Extranjeria</option>
               <option value="4">PEP</option>
               <option value="5">Permiso de Proteccion Temporal</option>

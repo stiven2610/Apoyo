@@ -9,11 +9,11 @@ const buscador_aprendiz = () => {
             Tipo de Documento
           </label>
           <select className="form-select" aria-label="Default select example">
-            <option value="1">Cedula de Ciudadania</option>
-            <option value="2">Tarjeta de Identida</option>
-            <option value="3">Cedula de Extranjeria</option>
+            <option value="1">Cédula de Ciudadania</option>
+            <option value="2">Tarjeta de Identidad</option>
+            <option value="3">Cédula de Extranjeria</option>
             <option value="4">PEP</option>
-            <option value="5">Permiso de Proteccion Temporal</option>
+            <option value="5">Permiso de Protección Temporal</option>
           </select>
         </div>
         <div className="form-group mb-2 text-center">

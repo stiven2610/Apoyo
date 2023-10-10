@@ -1,7 +1,8 @@
 import { useState } from "react";
 import "./styles.css";
-
+import { useNavigate } from "react-router-dom";
 const FormularioCreaBeneficio = () => {
+  const navigate = useNavigate();
   const [beneficio, setBeneficio] = useState({
     codigo_beneficio: "",
     cupos_beneficio: "",
@@ -17,7 +18,7 @@ const FormularioCreaBeneficio = () => {
     archivo_excel: "",
   });
 
-  const [successMessage, setSuccessMessage] = useState("");
+  const [successMessage] = useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -32,7 +33,7 @@ const FormularioCreaBeneficio = () => {
       });
 
       if (res.ok) {
-        setSuccessMessage("Beneficio creado exitosamente.");
+        navigate("/adjudicados");
       } else {
         const errorData = await res.json();
 

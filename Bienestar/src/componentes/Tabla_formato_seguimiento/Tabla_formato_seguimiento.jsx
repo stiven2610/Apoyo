@@ -7,17 +7,17 @@ const Tabla_formato_seguimiento = () => {
               <thead>
                 <tr>
                   <th>Nombre Completo del Aprendiz</th>
-                  <th>Codigo Ficha</th>
+                  <th>Código Ficha</th>
                   <th>Número de Documento</th>
                   <th>Modalidad Escogida</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td>yeison stiven gutierrez rozo</td>
-                  <td>2619701</td>
-                  <td>1094778783</td>
-                  <td>Taller mensual</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
                 </tr>
               </tbody>
             </table>

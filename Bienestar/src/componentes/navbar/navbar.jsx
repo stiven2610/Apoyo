@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom"; // Si estás utilizando React Router
-import "./styles.css"
+import "./styles.css";
 const Navbar = () => {
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light">
+    <nav className="navbar navbar-expand-lg "style={{ background: "#4ae96f" }}>
       <div className="container ">
         <Link to="/" className="navbar-brand">
           APOYO DE SOSTENIMIENTO
@@ -20,15 +20,24 @@ const Navbar = () => {
         </button>
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav ml-auto">
-
             <li className="nav-item">
-              <Link to="/formularioregistro" className="nav-link">
-                Registrar asistencia aprendiz
+              <Link to="/" className="nav-link">
+                Inicio
               </Link>
             </li>
             <li className="nav-item">
-              <Link to="/" className="nav-link">
+              <Link to="/formularioregistro" className="nav-link">
+                Asistencia
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link to="/login" className="nav-link">
                 Aplicación
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link to="https://oferta.senasofiaplus.edu.co/sofia-oferta/inscripcion-apoyo-sostenimiento.html" className="nav-link">
+                Realizar inscripción
               </Link>
             </li>
           </ul>

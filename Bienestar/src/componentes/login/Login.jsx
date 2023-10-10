@@ -1,7 +1,12 @@
 import "./styles.css";
 import { useState } from "react";
 import Navbar from "../navbar/navbar";
+import Footer from "../Footer/Footer";
+import { useNavigate } from "react-router-dom";
+
 const Login = () => {
+  const navigate = useNavigate();
+
   const [user, setUser] = useState({
     codigo_usuario: "",
     contrasenha_usuario: "",
@@ -47,10 +52,8 @@ const Login = () => {
       }
     }
   };
-
   const handleSubmit = async (e) => {
-    e.preventDefault();
-
+    e.preventDefault();               
     try {
       const res = await fetch("http://localhost:4000/login", {
         method: "POST",
@@ -61,8 +64,11 @@ const Login = () => {
       });
 
       if (res.ok) {
+ 
+
         // La respuesta del servidor es exitosa (código de estado HTTP 200)
         // Puedes realizar alguna acción adicional, como redirigir al usuario
+        navigate("/adjudicados");
       } else {
         const errorData = await res.json(); // Lee el mensaje de error del servidor
         if (errorData.field === "contrasenha_usuario") {
@@ -85,11 +91,11 @@ const Login = () => {
   return (
     <>
     <Navbar />
-    <div className="container mt-5">
+    <div className="container m-5">
       <div id="form-container" className="bg-light p-4 shadow row col-7 justify-content-center text-center">
         <div className="col-md-9">
-          <form onSubmit={handleSubmit}>
-            <h2 className="mb-4">Iniciar Sesión</h2>
+          <form onSubmit={handleSubmit}method="POST">
+            <h2 className="mb-4"style={{ color: "#4ae96f" }}>Iniciar Sesión</h2>
             <div className="mb-3">
               <label htmlFor="numerodocumento" className="form-label">
                 Codigo Usuario
@@ -129,12 +135,12 @@ const Login = () => {
               )}
             </div>
             <div className="mb-3">
-              <button type="submit" className="btn btn-primary btn-block">
+              <button type="submit" className="btn  btn-block"style={{ background: "#4ae96f" }}>
                 Iniciar Sesión
               </button>
             </div>
             <div className="text-center">
-              <button type="button" className="btn btn-link">
+              <button type="button" className="btn ">
                 ¿Olvidaste tu Contraseña?
               </button>
             </div>
@@ -142,6 +148,7 @@ const Login = () => {
         </div>
       </div>
     </div>
+    <Footer/>
   </>
   );
 };

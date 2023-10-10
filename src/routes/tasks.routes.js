@@ -11,6 +11,8 @@ const { validarUsuario } = require("../controllers/login.controllers");
 const { crearBeneficio} = require("../controllers/beneficio.controller");
 const { formularioRegistroAsistencia } = require("../controllers/asistencia.controller");
 const {obtenerAdjudicados}  = require("../controllers/adjudicados.controller");
+const {creacionTaller} = require("../controllers/creacion.taller")
+const {asistencias} = require ("../controllers/asistencias.controller")
 //rutas para CRUD de usuario...
 router.get("/usuarios", getALlUsuarios);
 
@@ -30,4 +32,7 @@ router.post("/beneficio", crearBeneficio);
 router.post("/asistenciataller",formularioRegistroAsistencia )
 
 router.get("/adjudicados",obtenerAdjudicados)
+router.get("/asistencias",asistencias)
+//ruta para registro de asistencia
+router.post("/creaciontaller",creacionTaller )
 module.exports = router;

@@ -1,11 +1,12 @@
 import { Link } from "react-router-dom";
 import "./styles.css";
+
 const Header = () => {
   return (
-    <div className="navbar navbar-expand-lg bg-body-tertiary ">
-      <a className="navbar-brand" href="#">
+    <div className="navbar navbar-expand-lg bg-body-tertiary">
+      <h1 className="navbar-brand" href="#">
         Bienestar
-      </a>
+      </h1>
       <button
         className="navbar-toggler"
         type="button"
@@ -20,16 +21,19 @@ const Header = () => {
       <div className="collapse navbar-collapse" id="navbarNavDropdown">
         <ul className="navbar-nav">
           <li className="nav-item">
-            <Link to="/adjudicados">
-              <a className="nav-link" href="#">
-                Beneficio
-              </a>
+            <Link to="/adjudicados" className="nav-link">
+              Beneficiarios
             </Link>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="#">
-              Gestionar Formato
-            </a>
+            <Link to="/beneficio" className="nav-link">
+              Creación de Beneficio
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link to="/tallermensual" className="nav-link">
+              Creación de Taller
+            </Link>
           </li>
           <li className="nav-item dropdown">
             <a
@@ -39,42 +43,27 @@ const Header = () => {
               data-bs-toggle="dropdown"
               aria-expanded="false"
             >
-              Gestionar aprendiz
+              Filtros aprendiz
             </a>
             <ul className="dropdown-menu">
               <li>
-                <Link to="/tablalectiva">
-                  <a className="dropdown-item" href="#">
-                    A punto de cumplir etapa lectiva
-                  </a>
+                <Link to="/tablalectiva" className="dropdown-item">
+                  A punto de cumplir etapa lectiva
                 </Link>
               </li>
               <li>
-                <Link to="/tablaproductiva">
-                  <a className="dropdown-item" href="#">
-                    A punto de cumplir etapa productiva
-                  </a>
+                <Link to="/culminaformacion" className="dropdown-item">
+                  A punto de culminar formación
                 </Link>
               </li>
               <li>
-                <Link to="/asistenciataller">
-                  <a className="dropdown-item" href="#">
-                    Asistencia taller
-                  </a>
+                <Link to="/asistencia" className="dropdown-item">
+                  Asistencia taller
                 </Link>
               </li>
               <li>
-                <Link to="/formatoseguimiento">
-                  <a className="dropdown-item" href="#">
-                    Formato de seguimiento
-                  </a>
-                </Link>
-              </li>
-              <li>
-                <Link>
-                  <a className="dropdown-item" href="#">
-                    Aprendices por formato
-                  </a>
+                <Link to="/formatoseguimiento" className="dropdown-item">
+                 Novedades Formato de seguimiento
                 </Link>
               </li>
             </ul>
@@ -91,14 +80,12 @@ const Header = () => {
             </a>
             <ul className="dropdown-menu">
               <li>
-                <Link to='/datosusuario'>
-                  <a className="dropdown-item" href="#">
-                    Gestionar datos
-                  </a>
+                <Link to="/datosusuario" className="dropdown-item">
+                  Gestionar datos
                 </Link>
               </li>
               <li>
-                <a className="dropdown-item" href="#">
+                <a className="dropdown-item" href="/">
                   Salir
                 </a>
               </li>
