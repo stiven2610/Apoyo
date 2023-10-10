@@ -90,12 +90,13 @@ const Login = () => {
 
   return (
     <>
-    <Navbar />
-    <div className="container m-5">
-      <div id="form-container" className="bg-light p-4 shadow row col-7 justify-content-center text-center">
-        <div className="col-md-9">
-          <form onSubmit={handleSubmit}method="POST">
-            <h2 className="mb-4"style={{ color: "#4ae96f" }}>Iniciar Sesión</h2>
+      <Navbar />
+      <div className="container-fluid d-flex flex-column justify-content-center align-items-center" style={{ minHeight: "70vh" }}>
+        <div id="form-container" className="bg-light p-4 shadow col-md-4 text-center">
+          <form onSubmit={handleSubmit} method="POST">
+            <h2 className="mb-4" style={{ color: "#4ae96f" }}>
+              Iniciar Sesión
+            </h2>
             <div className="mb-3">
               <label htmlFor="numerodocumento" className="form-label">
                 Codigo Usuario
@@ -104,7 +105,7 @@ const Login = () => {
                 name="codigo_usuario"
                 onChange={handleChange}
                 type="tel"
-                className={`form-control ${errors.codigo_usuario ? "is-invalid" : ""}`} // Aplicar clases de error
+                className={`form-control ${errors.codigo_usuario ? "is-invalid" : ""}`}
                 id="numerodocumento"
                 maxLength="6"
                 required
@@ -123,7 +124,7 @@ const Login = () => {
                 onChange={handleChange}
                 name="contrasenha_usuario"
                 type="password"
-                className={`form-control ${errors.contrasenha_usuario ? "is-invalid" : ""}`} // Aplicar clases de error
+                className={`form-control ${errors.contrasenha_usuario ? "is-invalid" : ""}`}
                 id="Password"
                 maxLength="11"
                 required
@@ -135,21 +136,20 @@ const Login = () => {
               )}
             </div>
             <div className="mb-3">
-              <button type="submit" className="btn  btn-block"style={{ background: "#4ae96f" }}>
+              <button type="submit" className="btn btn-block" style={{ background: "#4ae96f" }}>
                 Iniciar Sesión
               </button>
             </div>
             <div className="text-center">
-              <button type="button" className="btn ">
+              <button type="button" className="btn">
                 ¿Olvidaste tu Contraseña?
               </button>
             </div>
           </form>
         </div>
       </div>
-    </div>
-    <Footer/>
-  </>
+      <Footer />
+    </>
   );
 };
 
