@@ -113,8 +113,7 @@ const FormRegistroAsistenciaTaller = () => {
   return (
     <>
       <Navbar />
-      <div className="padre p-4">
-        <div className="container d-flex justify-content-center">
+      <div className="container-fluid d-flex flex-column justify-content-center align-items-center"style={{ minHeight: "70vh" }}>
           <div className="col-md-5" id="form-container">
             <div className="container_form bg-light p-4 rounded text-center">
               <p className="titulo_beneficio  font-weight-bold"style={{ color: "#084416" }}>
@@ -125,7 +124,7 @@ const FormRegistroAsistenciaTaller = () => {
                 <div className="form-group mb-2 text-center">
                   <label
                     htmlFor="numero_documento_aprendiz"
-                    className="form_label mb-3"style={{ color: "#4ae96f" }}
+                    className="form_label mb-3"style={{ color: "#39A900" }}
                   >
                     Número de Documento
                   </label>
@@ -147,7 +146,7 @@ const FormRegistroAsistenciaTaller = () => {
                   )}
                 </div>
                 <div className="form-group mb-2 text-center">
-                  <label htmlFor="codigo_taller" className="form_label mb-3"style={{ color: "#4ae96f" }}>
+                  <label htmlFor="codigo_taller" className="form_label mb-3"style={{ color: "#39A900" }}>
                     Código del Taller
                   </label>
                   <input
@@ -171,7 +170,7 @@ const FormRegistroAsistenciaTaller = () => {
                 <div className="form-group mb-2 text-center">
                   <label
                     htmlFor="contrasenha_taller"
-                    className="form_label mb-3"style={{ color: "#4ae96f" }}
+                    className="form_label mb-3"style={{ color: "#39A900" }}
                   >
                     Contraseña del Taller
                   </label>
@@ -194,7 +193,7 @@ const FormRegistroAsistenciaTaller = () => {
                 </div>
 
                 <button
-                  className="btn boton_crear m-4 btn-success"style={{ background: "#4ae96f" }}
+                  className="btn boton_crear m-4 btn-success"style={{ background: "#39A900" }}
                   type="submit"
                 >
                   Registrarse
@@ -203,7 +202,6 @@ const FormRegistroAsistenciaTaller = () => {
             </div>
           </div>
         </div>
-      </div>
       <Footer/>
     </>
   );

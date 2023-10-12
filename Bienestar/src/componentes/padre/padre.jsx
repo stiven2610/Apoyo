@@ -9,7 +9,7 @@ const Padre = () => {
       <div className="container mt-4 py-5 " style={{ backgroundColor: "#f8f8f8" }}>
         <div className="row">
           <div className="col-md-12 text-center">
-            <h4 className= ""style={{ color: "#63cc1e" }}>BIENESTAR AL APRENDIZ</h4>
+            <h4 className= ""style={{ color: "#39A900" }}>BIENESTAR AL APRENDIZ</h4>
             <p className="text-muted ">
               Es una estrategia institucional para contribuir en la permanencia
               y el desempeño exitoso de los aprendices de la entidad en su
@@ -39,7 +39,7 @@ const Padre = () => {
           </div>
         </div>
         <div className="row mt-3 text-center">
-          <h1 className="m-3"style={{ color: "#63cc1e" }}>Equipo de Bienestar al Aprendiz</h1>
+          <h1 className="m-3"style={{ color: "#39A900" }}>Equipo de Bienestar al Aprendiz</h1>
           <div className="col-md-4 mb-4 ">
             <div className="border rounded p-2 shadow">
               <img
@@ -76,12 +76,12 @@ const Padre = () => {
         </div>
 
         <div className="row m-4 text-center">
-          <h1 className="p-3"style={{ color: "#63cc1e" }}>Objetivos Plan de Bienestar al Aprendiz</h1>
+          <h1 className="p-3"style={{ color: "#39A900" }}>Objetivos Plan de Bienestar al Aprendiz</h1>
           <div className="col-md-4 ">
             <div className="col-md-12 mt-2">
               <div className="card">
                 <div className="card-body">
-                  <h5 className="card-title"style={{ color: "#63cc1e" }}>Objetivo estratégico 1</h5>
+                  <h5 className="card-title"style={{ color: "#39A900" }}>Objetivo estratégico 1</h5>
                   <p className="card-text">
                     Implementar estrategias de acompañamiento para el desarrollo
                     integral del aprendiz en su proceso formativo.
@@ -94,7 +94,7 @@ const Padre = () => {
             <div className="col-md-12 mt-2">
               <div className="card">
                 <div className="card-body">
-                  <h5 className="card-title"style={{ color: "#63cc1e" }}>Objetivo estratégico 2</h5>
+                  <h5 className="card-title"style={{ color: "#39A900" }}>Objetivo estratégico 2</h5>
                   <p className="card-text">
                     Incentivar al aprendiz en su proceso de formación
                     profesional integral mediante la implementación de un
@@ -108,7 +108,7 @@ const Padre = () => {
             <div className="col-md-12 mt-2">
               <div className="card">
                 <div className="card-body">
-                  <h5 className="card-title"style={{ color: "#63cc1e" }}>Objetivo estratégico 3</h5>
+                  <h5 className="card-title"style={{ color: "#39A900" }}>Objetivo estratégico 3</h5>
                   <p className="card-text">
                     Entregar con oportunidad y calidad los servicios de
                     bienestar al aprendiz documentando procedimientos que
@@ -123,7 +123,7 @@ const Padre = () => {
           <div className="col-md-12 ">
             <div className="card">
               <div className="card-body">
-                <h5 className="card-title"style={{ color: "#63cc1e" }}>
+                <h5 className="card-title"style={{ color: "#39A900" }}>
                   ¿Quiénes pueden acceder al Plan de Bienestar al Aprendiz?
                 </h5>
                 <p className="card-text">
@@ -142,7 +142,7 @@ const Padre = () => {
           <div className="col-md-12">
             <div className="card">
               <div className="card-body">
-                <h5 className="card-title"style={{ color: "#63cc1e" }}>
+                <h5 className="card-title"style={{ color: "#39A900" }}>
                   ¿Qué beneficios ofrece el Plan de Bienestar al Aprendiz?
                 </h5>
                 <p className="card-text">

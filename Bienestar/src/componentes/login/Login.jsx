@@ -94,7 +94,7 @@ const Login = () => {
       <div className="container-fluid d-flex flex-column justify-content-center align-items-center" style={{ minHeight: "70vh" }}>
         <div id="form-container" className="bg-light p-4 shadow col-md-4 text-center">
           <form onSubmit={handleSubmit} method="POST">
-            <h2 className="mb-4" style={{ color: "#4ae96f" }}>
+            <h2 className="mb-4" style={{ color: "#39A900" }}>
               Iniciar Sesión
             </h2>
             <div className="mb-3">
@@ -136,7 +136,7 @@ const Login = () => {
               )}
             </div>
             <div className="mb-3">
-              <button type="submit" className="btn btn-block" style={{ background: "#4ae96f" }}>
+              <button type="submit" className="btn btn-block" style={{ background: "#39A900" }}>
                 Iniciar Sesión
               </button>
             </div>

@@ -26,7 +26,7 @@ const Tabla_asistencia = () => {
   }, []);
 
   return (
-    <div className="container_body">
+    <div className="container_body v-100">
       <div className="table-container">
         <div className="table-responsive">
           <table className="table table-bordered table-striped">

@@ -1,51 +1,55 @@
 import { Link } from "react-router-dom";
-import React from "react"; // Asegúrate de importar React si aún no lo has hecho
+import { Navbar, Nav, NavDropdown } from "react-bootstrap";
+import "./styles.css";
 
-const Navbar = () => {
+const Navegacion = () => {
   return (
-    <nav className="navbar navbar-expand-lg navbar-light" style={{ background: "#4ae96f" }}>
-      <div className="container"> {/* Agregamos un contenedor para alinear el contenido */}
-        <h1 className="navbar-brand text-center w-100">APOYO DE SOSTENIMIENTO</h1>
-        <div className="collapse navbar-collapse" id="navbarNav">
-          <ul className="navbar-nav ml-auto">
-            <div className="col-12 col-md-3"> {/* Colocamos los enlaces en columnas de igual ancho */}
-              <li className="nav-item">
-                <Link to="/" className="nav-link">
-                  Inicio
-                </Link>
-              </li>
-            </div>
-            <div className="col-12 col-md-3">
-              <li className="nav-item">
-                <Link to="/formularioregistro" className="nav-link">
-                  Asistencia
-                </Link>
-              </li>
-            </div>
-            <div className="col-12 col-md-3">
-              <li className="nav-item">
-                <Link to="/login" className="nav-link">
-                  Aplicación
-                </Link>
-              </li>
-            </div>
-            <div className="col-12 col-md-3">
-              <li className="nav-item">
-                <a
+    <div
+      className=" d-flex flex-column w-100 aling-items-center justify-content-center"
+      style={{ background: "#39A900" }}
+    >
+      <h2 className="text-center " style={{ color: "#000000" }}>
+        APOYO DE SOSTENIMIENTO
+      </h2>
+      <div className="d-flex align-items-center justify-content-center">
+        <Navbar expand="lg">
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+
+          <Navbar.Collapse id="basic-navbar-nav">
+            <Nav className="ml-auto">
+              <Link to="/" className="nav-link" style={{ color: "#000000" }}>
+                Inicio
+              </Link>
+              <Link
+                to="/formularioregistro"
+                className="nav-link"
+                style={{ color: "#000000" }}
+              >
+                Asistencia
+              </Link>
+              <Link
+                to="/login"
+                className="nav-link"
+                style={{ color: "#000000" }}
+              >
+                Aplicación
+              </Link>
+              <NavDropdown title="Más opciones" id="basic-nav-dropdown">
+                <NavDropdown.Item
                   href="https://oferta.senasofiaplus.edu.co/sofia-oferta/inscripcion-apoyo-sostenimiento.html"
-                  className="nav-link"
                   target="_blank"
                   rel="noopener noreferrer"
+                  style={{ color: "#000000" }}
                 >
                   Realizar inscripción
-                </a>
-              </li>
-            </div>
-          </ul>
-        </div>
+                </NavDropdown.Item>
+              </NavDropdown>
+            </Nav>
+          </Navbar.Collapse>
+        </Navbar>
       </div>
-    </nav>
+    </div>
   );
 };
 
-export default Navbar;
+export default Navegacion;

@@ -73,11 +73,11 @@ const FormularioCreaBeneficio = () => {
       >
         <div className="col-md-5">
           <div className="container_form bg-light p-4 rounded text-center">
-            <p className="titulo_beneficio text-success font-weight-bold">
+            <p className="titulo_beneficio text-dark font-weight-bold">
               BENEFICIO
             </p>
             <form onSubmit={handleSubmit} encType="multipart/form-data">
-              <div className="form-group mb-2 text-center">
+              <div className="form-group mb-2 text-center" style={{ color: "#39A900" }}>
                 <label htmlFor="codigo_beneficio" className="form_label mb-3">
                   Código beneficio
                 </label>
@@ -98,7 +98,7 @@ const FormularioCreaBeneficio = () => {
                   </span>
                 )}
               </div>
-              <div className="form-group mb-2 text-center">
+              <div className="form-group mb-2 text-center" style={{ color: "#39A900" }}>
                 <label htmlFor="cupos_beneficio" className="form_label mb-3">
                   Ingrese número de cupos
                 </label>
@@ -119,7 +119,7 @@ const FormularioCreaBeneficio = () => {
                   </span>
                 )}
               </div>
-              <div className="form-group mb-2 text-center">
+              <div className="form-group mb-2 text-center" style={{ color: "#39A900" }}>
                 <label
                   htmlFor="fecha_inicio_beneficio"
                   className="form_label mb-3"
@@ -143,7 +143,7 @@ const FormularioCreaBeneficio = () => {
                   </span>
                 )}
               </div>
-              <div className="form-group text-center">
+              <div className="form-group text-center"style={{ color: "#39A900" }}>
                 <label
                   htmlFor="fecha_fin_beneficio"
                   className="form_label mb-3"
@@ -167,7 +167,7 @@ const FormularioCreaBeneficio = () => {
                   </span>
                 )}
               </div>
-              <div className="form-group text-center">
+              <div className="form-group text-center" style={{ color: "#39A900" }}>
                 <label
                   htmlFor="archivo_excel"
                   className="form_label mb-3"
@@ -191,7 +191,7 @@ const FormularioCreaBeneficio = () => {
                   </span>
                 )}
               </div>
-              <button className="btn boton_crear m-2 btn-success" type="submit">
+              <button className="btn boton_crear m-2 btn-success"style={{ background: "#39A900" }} type="submit">
                 CREAR
               </button>
               {successMessage && (
